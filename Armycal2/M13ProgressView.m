@@ -27,6 +27,7 @@
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
     _progress = progress;
+    //_progress = self.tag;
 }
 
 - (void)performAction:(M13ProgressViewAction)action animated:(BOOL)animated

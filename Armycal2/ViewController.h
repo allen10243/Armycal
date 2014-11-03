@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PassValueDelegate.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController  <PassValueDelegate>
 
 - (void) labelupdater;
+
+
+@property NSDate *DefaultDate1;
+@property NSDate *DefaultDate2;
+
 
 @end
 

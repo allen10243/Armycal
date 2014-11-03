@@ -11,9 +11,11 @@
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+#import <UIKit/UIKit.h>
 #import "M13ProgressViewRing.h"
 #import <CoreGraphics/CoreGraphics.h>
 #import "Timehandler.h"
+#import "SingletonObject.h"
 
 @interface M13ProgressViewRing ()
 /**The number formatter to display the progress percentage.*/
@@ -84,16 +86,13 @@
 
 - (void)progressupdater
 {
+    
+    [self setNeedsDisplay];
+    NSLog(@"redraw");
 
-    Timehandler *Time_object = [[Timehandler alloc] init];
-    self.progress = [Time_object timecalculater];    
-    NSLog(@"b%f", [Time_object timecalculater]);
-    [self performSelector:@selector(progressupdater) withObject:self afterDelay:1.0];
+    [self performSelector:@selector(progressupdater) withObject:self afterDelay:0.1];
     
     
-    
-
-
 }
 
 
@@ -201,30 +200,30 @@
 
 - (void)setProgress:(CGFloat)progress animated:(BOOL)animated
 {
-    if (self.progress == progress) {
-        return;
-    }
-    if (animated == NO) {
-        if (_displayLink) {
-            //Kill running animations
-            [_displayLink removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
-            _displayLink = nil;
-        }
-        [super setProgress:progress animated:animated];
-        [self setNeedsDisplay];
-    } else {
-        _animationStartTime = CACurrentMediaTime();
-        _animationFromValue = self.progress;
-        _animationToValue = progress;
-        if (!_displayLink) {
-            //Create and setup the display link
-            [self.displayLink removeFromRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
-            self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(animateProgress:)];
-            [self.displayLink addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
-        } /*else {
-            //Reuse the current display link
-        }*/
-    }
+//    if (self.progress == progress) {
+//        return;
+//    }
+//    if (animated == NO) {
+//        if (_displayLink) {
+//            //Kill running animations
+//            [_displayLink removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
+//            _displayLink = nil;
+//        }
+//        [super setProgress:progress animated:animated];
+//        [self setNeedsDisplay];
+//    } else {
+//        _animationStartTime = CACurrentMediaTime();
+//        _animationFromValue = self.progress;
+//        _animationToValue = progress;
+//        if (!_displayLink) {
+//            //Create and setup the display link
+//            [self.displayLink removeFromRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
+//            self.displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(animateProgress:)];
+//            [self.displayLink addToRunLoop:NSRunLoop.mainRunLoop forMode:NSRunLoopCommonModes];
+//        } /*else {
+//            //Reuse the current display link
+//        }*/
+//    }
 }
 
 - (void)animateProgress:(CADisplayLink *)displayLink
@@ -407,6 +406,9 @@
 
 - (void)drawRect:(CGRect)rect
 {
+    
+    self.progress = [[SingletonObject sharedSingletonObject] showDate]*0.01;
+    
     [super drawRect:rect];
     
     //Draw the background
@@ -505,6 +507,8 @@
 
 - (void)drawProgress
 {
+    
+    
     //Create parameters to draw progress
     float startAngle = - M_PI_2;
     float endAngle = startAngle + (2.0 * M_PI * self.progress);

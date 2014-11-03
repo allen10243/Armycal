@@ -17,6 +17,8 @@
 		B51985C019EBC59E001D37C9 /* M13ProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B51985BD19EBC59E001D37C9 /* M13ProgressView.m */; };
 		B51985C119EBC59F001D37C9 /* M13ProgressViewRing.m in Sources */ = {isa = PBXBuildFile; fileRef = B51985BF19EBC59E001D37C9 /* M13ProgressViewRing.m */; };
 		B51985C619EBED68001D37C9 /* Timehandler.m in Sources */ = {isa = PBXBuildFile; fileRef = B51985C519EBED68001D37C9 /* Timehandler.m */; };
+		B52131121A069052004E76AA /* SingletonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B52131111A069052004E76AA /* SingletonObject.m */; };
+		B5C0300F19FDF54B00CB9017 /* SecViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C0300E19FDF54B00CB9017 /* SecViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,11 @@
 		B51985BF19EBC59E001D37C9 /* M13ProgressViewRing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = M13ProgressViewRing.m; sourceTree = "<group>"; };
 		B51985C419EBED43001D37C9 /* Timehandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Timehandler.h; sourceTree = "<group>"; };
 		B51985C519EBED68001D37C9 /* Timehandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Timehandler.m; sourceTree = "<group>"; };
+		B521310F1A050F7D004E76AA /* PassValueDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassValueDelegate.h; sourceTree = "<group>"; };
+		B52131101A06901E004E76AA /* SingletonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SingletonObject.h; sourceTree = "<group>"; };
+		B52131111A069052004E76AA /* SingletonObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SingletonObject.m; sourceTree = "<group>"; };
+		B5C0300D19FDF54B00CB9017 /* SecViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecViewController.h; sourceTree = "<group>"; };
+		B5C0300E19FDF54B00CB9017 /* SecViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +97,11 @@
 		B519859519EBB604001D37C9 /* Armycal2 */ = {
 			isa = PBXGroup;
 			children = (
+				B52131101A06901E004E76AA /* SingletonObject.h */,
+				B52131111A069052004E76AA /* SingletonObject.m */,
+				B521310F1A050F7D004E76AA /* PassValueDelegate.h */,
+				B5C0300D19FDF54B00CB9017 /* SecViewController.h */,
+				B5C0300E19FDF54B00CB9017 /* SecViewController.m */,
 				B51985C419EBED43001D37C9 /* Timehandler.h */,
 				B51985C519EBED68001D37C9 /* Timehandler.m */,
 				B51985BC19EBC59E001D37C9 /* M13ProgressView.h */,
@@ -241,6 +253,8 @@
 				B519859C19EBB604001D37C9 /* AppDelegate.m in Sources */,
 				B519859919EBB604001D37C9 /* main.m in Sources */,
 				B51985C119EBC59F001D37C9 /* M13ProgressViewRing.m in Sources */,
+				B52131121A069052004E76AA /* SingletonObject.m in Sources */,
+				B5C0300F19FDF54B00CB9017 /* SecViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

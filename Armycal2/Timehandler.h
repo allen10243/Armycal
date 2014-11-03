@@ -12,6 +12,6 @@
 @interface Timehandler : NSObject
 
 - (Timehandler *) init;
-- (double)timecalculater;
+- (double)timecalculater:(NSDate*) BeginDate and:(NSDate*)FinishDate;
 
 @end

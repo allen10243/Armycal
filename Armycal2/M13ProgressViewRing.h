@@ -10,12 +10,11 @@
  
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
-
 #import "M13ProgressView.h"
+#import "PassValueDelegate.h"
 
 /**A progress view stylized similarly to the iOS 7 App store progress view.*/
-@interface M13ProgressViewRing : M13ProgressView
-
+@interface M13ProgressViewRing : M13ProgressView     
 /**@name Appearance*/
 /**The width of the background ring in points.*/
 @property (nonatomic, assign) CGFloat backgroundRingWidth;
@@ -24,6 +23,9 @@
 /**@name Percentage*/
 /**Wether or not to display a percentage inside the ring.*/
 @property (nonatomic, assign) BOOL showPercentage;
+
+@property NSDate *DefaultDate1;
+@property NSDate *DefaultDate2;
 
 - (void)progressupdater;
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>A71AB288-C923-4C82-A36C-F0144D84FDE2</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Armycal2</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1F9220D702EB714617CEB849D681A1053BDCBB38</key>
+		<string>https://github.com/allen10243/Armycal.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Armycal2.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1F9220D702EB714617CEB849D681A1053BDCBB38</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/allen10243/Armycal.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1F9220D702EB714617CEB849D681A1053BDCBB38</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1F9220D702EB714617CEB849D681A1053BDCBB38</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Armycal</string>
+		</dict>
+	</array>
+</dict>
+</plist>
